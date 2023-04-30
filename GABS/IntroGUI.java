@@ -18,8 +18,11 @@ public class IntroGUI {
 											   /* /\ - change file path to get the image/s in the folder */
 		ImageIcon jImage = new ImageIcon("C:\\Users\\Lorenz Gil Suico\\eclipse-workspace\\JavaApp\\src\\GABS\\name.png");
 		
+		ImageIcon jLock = new ImageIcon("C:\\Users\\Lorenz Gil Suico\\eclipse-workspace\\JavaApp\\src\\GABS\\lock.png");
+		
 		JLabel jLabel = new JLabel(); //create the labels
 		JButton jButton = new JButton();//create the buttons
+		JButton loginPage = new JButton();
 		
 		//Setting the JFrame to Android Screen
 		jFrame.setTitle("GABS USC");
@@ -40,9 +43,15 @@ public class IntroGUI {
 		jButton.setFocusable(false);
 		jButton.setBackground(Color.white);
 		jButton.setBorder(roundedBorder);
-				
+		
+		loginPage.setBounds(420,670,75,75);
+		loginPage.setIcon(jLock);
+		loginPage.setBackground(jFrame.getBackground());
+		loginPage.setBorderPainted(false);
+		
 		jFrame.add(jLabel);
 		jFrame.add(jButton);
+		jFrame.add(loginPage);
 				
 		jFrame.setVisible(true);
 		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
